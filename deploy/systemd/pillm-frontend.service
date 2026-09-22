@@ -1,0 +1,30 @@
+[Unit]
+Description=PiLLM Frontend (Next.js)
+After=network.target pillm-backend.service
+Wants=pillm-backend.service
+
+[Service]
+Type=simple
+User=pillm
+Group=pillm
+WorkingDirectory=/opt/pillm/frontend
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=HOSTNAME=127.0.0.1
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+StartLimitBurst=3
+StartLimitIntervalSec=60
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pillm-frontend
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
