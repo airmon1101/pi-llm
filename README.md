@@ -38,8 +38,8 @@ See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for a detailed breakdown.
 ## Quick Start / Installation
 Clone the repository and run the installer as root:
 ```bash
-git clone https://github.com/yourusername/pi-llm.git /opt/pillm
-cd /opt/pillm
+git clone https://github.com/airmon1101/pi-llm.git
+cd /opt/pi-llm
 sudo bash scripts/install.sh
 ```
 
