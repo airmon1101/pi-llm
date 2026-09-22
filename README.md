@@ -39,7 +39,7 @@ See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for a detailed breakdown.
 Clone the repository and run the installer as root:
 ```bash
 git clone https://github.com/airmon1101/pi-llm.git
-cd /opt/pi-llm
+cd pi-llm
 sudo bash scripts/install.sh
 ```
 
